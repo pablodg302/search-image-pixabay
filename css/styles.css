@@ -288,6 +288,7 @@ form input:nth-child(2){
   .imgList{
     padding: 2rem;
     grid-template-columns: 1fr;
+    grid-gap: 1rem;
   }
   .busquedas-frecuentes{
     flex-direction: column;

@@ -2,7 +2,7 @@ const resultado = document.querySelector('#resultado');
 const paginacionDiv = document.querySelector('#paginacion');
 const btnClean = document.querySelector('.btn-clean');
 
-let terminoBusqueda = 'landscape'
+let terminoBusqueda = 'photography'
 let paginaActual = 1;
 let totalPaginas;
 let iteradorSiguiente;

@@ -2,7 +2,7 @@ const resultado = document.querySelector('#resultado');
 const paginacionDiv = document.querySelector('#paginacion');
 const btnClean = document.querySelector('.btn-clean');
 
-let terminoBusqueda;
+let terminoBusqueda = 'landscape'
 let paginaActual = 1;
 let totalPaginas;
 let iteradorSiguiente;
@@ -33,11 +33,19 @@ window.onload = () => {
     paginacionDiv.addEventListener('click', direccionPaginacion);
 };
 
+document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('popular-search')){
+        terminoBusqueda = e.target.getAttribute('value');
+
+        buscarImagenes(terminoBusqueda)
+        console.log(terminoBusqueda)
+    }
+})
 
 function validarFormulario(e) {
     e.preventDefault();
 
-    const terminoBusqueda = document.querySelector('#termino').value;
+    terminoBusqueda = document.querySelector('#termino').value;
 
     if(terminoBusqueda === '') {
         // mensaje de error
@@ -71,15 +79,17 @@ function mostrarAlerta(mensaje) {
 
 
 // Busca las imagenes en una API
-function buscarImagenes() {
+function buscarImagenes(terminoBusqueda) {
     while(resultado.firstChild) {
         resultado.removeChild(resultado.firstChild);
     }
     spinnerLoaded()
     totalPaginas = '';
     iteradorSiguiente = '';
-    
-    const terminoBusqueda = document.querySelector('#termino').value;
+    if(!terminoBusqueda){
+
+        terminoBusqueda = document.querySelector('#termino').value;
+    }
     
 
     const key = '21591541-599aa489255915e093161288e';

@@ -286,7 +286,7 @@ form input:nth-child(2){
     max-height: 250px;
   }
   .imgList{
-
+    padding: 2rem;
     grid-template-columns: 1fr;
   }
   .busquedas-frecuentes{

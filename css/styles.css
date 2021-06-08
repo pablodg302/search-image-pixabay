@@ -290,6 +290,9 @@ form input:nth-child(2){
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
+  .card-img:hover .card-text-content {
+    transform: translateY(0px);
+  }
   .busquedas-frecuentes{
     flex-direction: column;
   }

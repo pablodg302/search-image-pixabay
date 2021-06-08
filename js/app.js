@@ -3,6 +3,7 @@ const resultado = document.querySelector('#resultado');
 const paginacionDiv = document.querySelector('#paginacion');
 const btnClean = document.querySelector('.btn-clean');
 
+let terminoBusqueda;
 let paginaActual = 1;
 let totalPaginas;
 let iteradorSiguiente;
@@ -13,6 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     buscarImagenes()
 })
 
+document.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log(e.target)
+    if(e.target.classList.contains('popular-search')){
+        terminoBusqueda = e.target.getAttribute('value');
+
+        console.log(terminoBusqueda)
+        buscarImagenes()
+    }
+})
 
 selectPag.addEventListener('change', ()=> {
     cantidadPorPag = selectPag.value;
@@ -70,10 +81,11 @@ function buscarImagenes() {
     iteradorSiguiente = '';
     
     
-    const terminoBusqueda = document.querySelector('#termino').value;
-
-    if(!terminoBusqueda){
-        let terminoBusqueda = 'landscape';
+    
+    if(terminoBusqueda === undefined){
+        terminoBusqueda = 'landscape';
+    }else{
+        const terminoBusqueda = document.querySelector('#termino').value;
     }
 
     const key = '21591541-599aa489255915e093161288e';

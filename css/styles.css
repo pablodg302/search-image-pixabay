@@ -16,6 +16,10 @@ body {
 
 }
 
+#cant-por-pag option{
+  color: rgb(107, 114, 128);
+}
+
 .imgList{
   padding: 1rem;
   display: grid;
@@ -62,6 +66,7 @@ body {
 
 .busquedas-frecuentes{
  border: 1px solid #fff;
+ background: rgba(0, 0, 0, 0.3);
 }
 
 .title-frecuentes{

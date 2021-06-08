@@ -1,4 +1,3 @@
-
 const resultado = document.querySelector('#resultado');
 const paginacionDiv = document.querySelector('#paginacion');
 const btnClean = document.querySelector('.btn-clean');
@@ -14,16 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
     buscarImagenes()
 })
 
-document.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(e.target)
-    if(e.target.classList.contains('popular-search')){
-        terminoBusqueda = e.target.getAttribute('value');
+// document.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log(e.target)
+//     if(e.target.classList.contains('popular-search')){
+//         terminoBusqueda = e.target.getAttribute('value');
 
-        console.log(terminoBusqueda)
-        buscarImagenes()
-    }
-})
+//         console.log(terminoBusqueda)
+//         buscarImagenes()
+//     }
+// })
 
 selectPag.addEventListener('change', ()=> {
     cantidadPorPag = selectPag.value;
@@ -80,13 +79,8 @@ function buscarImagenes() {
     totalPaginas = '';
     iteradorSiguiente = '';
     
+    const terminoBusqueda = document.querySelector('#termino').value;
     
-    
-    if(terminoBusqueda === undefined){
-        terminoBusqueda = 'landscape';
-    }else{
-        const terminoBusqueda = document.querySelector('#termino').value;
-    }
 
     const key = '21591541-599aa489255915e093161288e';
     const url = `https://pixabay.com/api/?key=${key}&q=${terminoBusqueda}&per_page=${cantidadPorPag}&page=${paginaActual}`;
@@ -158,7 +152,7 @@ function mostrarPaginacion() {
     listPag.classList.add('w-full', 'list-pag');
     paginacionDiv.appendChild(listPag)
     while( true ) {
-        const { value, done } = iteradorSiguiente.next();
+        const { value, done } = iteradorSiguiente.next();
 
         if(done) return;
 

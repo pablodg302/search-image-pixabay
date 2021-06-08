@@ -38,9 +38,9 @@ document.addEventListener('click', (e) => {
         terminoBusqueda = e.target.getAttribute('value');
 
         buscarImagenes(terminoBusqueda)
-        console.log(terminoBusqueda)
     }
 })
+console.log(terminoBusqueda)
 
 function validarFormulario(e) {
     e.preventDefault();
@@ -79,7 +79,7 @@ function mostrarAlerta(mensaje) {
 
 
 // Busca las imagenes en una API
-function buscarImagenes(terminoBusqueda) {
+function buscarImagenes() {
     while(resultado.firstChild) {
         resultado.removeChild(resultado.firstChild);
     }

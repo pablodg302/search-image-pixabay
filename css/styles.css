@@ -267,6 +267,9 @@ form input:nth-child(2){
     max-width: 500px;
     justify-self: center;
   } */
+  .card-text-content{
+    bottom: 0;
+  }
   .imgList{
 
     grid-template-columns: 1fr 1fr;
@@ -280,5 +283,11 @@ form input:nth-child(2){
   .imgList{
 
     grid-template-columns: 1fr;
+  }
+  .busquedas-frecuentes{
+    flex-direction: column;
+  }
+  .title-frecuentes{
+    border-right: 0px;
   }
 }

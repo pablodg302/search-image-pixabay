@@ -132,7 +132,7 @@ function mostrarImagenes(imagenes, paginas ) {
                                 <span class="card-text text-xs"><i class="far fa-eye"></i>  ${views}  Vistas  </span>
                             </div>
                         </div>
-                        <img class="w-full" src=${previewURL} alt={tags} />
+                        <img class="w-full" src=${previewURL} alt={tags} loading="lazy"/>
                     </div>
                 </a>
             </div>

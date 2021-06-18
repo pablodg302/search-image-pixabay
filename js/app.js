@@ -128,8 +128,8 @@ function mostrarImagenes(imagenes, paginas ) {
                     <div class="bg-black">
                         <div class="p-2 text-center card-text-content">
                             <div class="flex justify-evenly">
-                                <span class="card-text text-xs"><i class="fas fa-heart"></i> ${likes} Me Gusta</span>
-                                <span class="card-text text-xs"><i class="far fa-eye"></i>  ${views}  Vistas  </span>
+                                <span class="card-text text-xs"><i class="fas fa-heart"></i> ${likes} Likes</span>
+                                <span class="card-text text-xs"><i class="far fa-eye"></i>  ${views}  Views  </span>
                             </div>
                         </div>
                         <img class="w-full" src=${previewURL} alt={tags} loading="lazy"/>

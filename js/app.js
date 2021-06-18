@@ -126,7 +126,7 @@ function mostrarImagenes(imagenes, paginas ) {
                 rel="noopener noreferrer" 
                 target="_blank" class="w-full block">
                     <div class="bg-black">
-                        <div class="p-2 text-center card-text-content">
+                        <div class="p-1 text-center card-text-content">
                             <div class="flex justify-evenly">
                                 <span class="card-text text-xs"><i class="fas fa-heart"></i> ${likes} Likes</span>
                                 <span class="card-text text-xs"><i class="far fa-eye"></i>  ${views}  Views  </span>
